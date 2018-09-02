@@ -1,6 +1,8 @@
 package com.example.samsung.trabalho04_2018_1.model;
 
-public class Tipo {
+import com.example.samsung.trabalho04_2018_1.R;
+
+public class Tipo extends MainActivity {
 
     public static final Tipo[] TIPOS = {
             new Tipo("Carros", "carros", R.drawable.ic_carros),
@@ -22,4 +24,8 @@ public class Tipo {
         return tipo;
     }
 
+    @Override
+    public String getNome() {
+        return nome;
+    }
 }
