@@ -1,6 +1,6 @@
 package com.example.samsung.trabalho04_2018_1.model;
 
-public class Marca extends MainActivity{
+public class Marca extends SimpleBean{
 
     private Tipo tipo;
 

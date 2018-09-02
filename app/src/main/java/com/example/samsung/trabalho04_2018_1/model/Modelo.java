@@ -1,6 +1,6 @@
 package com.example.samsung.trabalho04_2018_1.model;
 
-public class Modelo extends MainActivity {
+public class Modelo extends SimpleBean {
 
     private Veiculo veiculo;
 

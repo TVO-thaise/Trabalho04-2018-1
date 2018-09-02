@@ -2,7 +2,7 @@ package com.example.samsung.trabalho04_2018_1.model;
 
 import com.example.samsung.trabalho04_2018_1.R;
 
-public class Tipo extends MainActivity {
+public class Tipo extends SimpleBean {
 
     public static final Tipo[] TIPOS = {
             new Tipo("Carros", "carros", R.drawable.ic_carros),

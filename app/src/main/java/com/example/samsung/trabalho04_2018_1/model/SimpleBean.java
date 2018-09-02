@@ -3,7 +3,7 @@ package com.example.samsung.trabalho04_2018_1.model;
 
 import java.io.Serializable;
 
-public abstract class MainActivity implements Serializable {
+public abstract class SimpleBean implements Serializable {
 
     protected String id;
     protected String nome;
