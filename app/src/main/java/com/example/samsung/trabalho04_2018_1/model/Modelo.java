@@ -8,7 +8,7 @@ public class Modelo extends MainActivity {
 
     public Modelo(String id, String name, Veiculo veiculo) {
         this.id = id;
-        this.name = name;
+        this.nome = nome;
         this.veiculo = veiculo;
     }
 
