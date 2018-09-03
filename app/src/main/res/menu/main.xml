@@ -6,6 +6,7 @@
     <item
         android:id="@+id/menu_search"
         android:icon="@drawable/ic_search_white_24dp"
+        android:orderInCategory="100"
         android:title="Pesquisa"
         app:showAsAction="always" />
 

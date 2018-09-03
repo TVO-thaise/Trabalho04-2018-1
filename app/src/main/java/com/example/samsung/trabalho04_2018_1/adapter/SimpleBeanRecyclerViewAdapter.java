@@ -1,9 +1,12 @@
 package com.example.samsung.trabalho04_2018_1.adapter;
 
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.example.samsung.trabalho04_2018_1.holder.SimpleBeanViewHolder;
 import com.example.samsung.trabalho04_2018_1.model.SimpleBean;
+import com.example.samsung.trabalho04_2018_1.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;

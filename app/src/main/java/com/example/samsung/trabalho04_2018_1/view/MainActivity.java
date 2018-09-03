@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.example.samsung.trabalho04_2018_1.R;
 import com.example.samsung.trabalho04_2018_1.utils.Android;
+//import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 public class MainActivity extends AppCompatActivity implements MaterialSearchView.OnQueryTextListener{
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchVie
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
 
-        itemSearch = menu.findItem(R.id.menu_search);
+        MenuItem item = menu.findItem(R.id.menu_search);
         searchView.setMenuItem(itemSearch);
 
         AbstractFragment frag = getSelectedFragment();
@@ -122,4 +123,34 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchVie
 
     @Override
     public boolean onQueryTextSubmit(String query) { return false; }
+
+    /*@Override
+    public static interface OnClickListner
+
+    MaterialSearchView searchView = (MaterialSearchView) findViewById(R.id.search_view);
+	searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
+        @Override
+        public boolean onQueryTextSubmit(String query) {
+            //Do some magic
+            return false;
+        }
+
+        @Override
+        public boolean onQueryTextChange(String newText) {
+            //Do some magic
+            return false;
+        }
+    });
+
+        searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
+        @Override
+        public void onSearchViewShown() {
+            //Do some magic
+        }
+
+        @Override
+        public void onSearchViewClosed() {
+            //Do some magic
+        }
+    });*/
 }

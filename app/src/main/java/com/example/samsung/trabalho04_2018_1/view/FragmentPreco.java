@@ -37,10 +37,10 @@ public class FragmentPreco extends AbstractFragment<Preco, Modelo>{
     @Override
     public void createData(final SimpleBeanRecyclerViewAdapter<Preco> adapter) {
         new FipeService((MainActivity)getActivity()).getPreco(parameter, new ServiceCallback<ArrayList<Preco>>() {
-            @Override
+            /*@Override
             public void onSuccess(ArrayList<Preco> data) {
                 adapter.setData(data);
-            }
+            }*/
         });
     }
 

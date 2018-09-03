@@ -5,6 +5,8 @@ import android.os.Bundle;
 import com.example.samsung.trabalho04_2018_1.adapter.SimpleBeanRecyclerViewAdapter;
 import com.example.samsung.trabalho04_2018_1.model.Modelo;
 import com.example.samsung.trabalho04_2018_1.model.Veiculo;
+import com.example.samsung.trabalho04_2018_1.service.FipeService;
+import com.example.samsung.trabalho04_2018_1.service.ServiceCallback;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,16 +34,16 @@ public class FragmentModelos extends AbstractFragment<Modelo,Veiculo>{
     @Override
     public void createData(final SimpleBeanRecyclerViewAdapter<Modelo> adapter) {
         new FipeService((MainActivity)getActivity()).getModelos(parameter, new ServiceCallback<ArrayList<Modelo>>() {
-            @Override
+            /*@Override
             public void onSuccess(ArrayList<Modelo> data) {
                 Collections.reverse(data);
                 adapter.setData(data);
-            }
+            }*/
         });
     }
 
     @Override
     public void onClick(Modelo obj) {
-        ((MainActivity)getActivity()).showFragment(FragmentValor.getInstance(obj));
+        ((MainActivity)getActivity()).showFragment(FragmentPreco.getInstance(obj));
     }
 }

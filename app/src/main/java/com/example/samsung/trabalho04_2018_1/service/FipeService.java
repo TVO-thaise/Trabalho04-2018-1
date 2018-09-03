@@ -4,7 +4,6 @@ import com.example.samsung.trabalho04_2018_1.model.Marca;
 import com.example.samsung.trabalho04_2018_1.model.Modelo;
 import com.example.samsung.trabalho04_2018_1.model.Preco;
 import com.example.samsung.trabalho04_2018_1.model.Tipo;
-import com.example.samsung.trabalho04_2018_1.model.Valor;
 import com.example.samsung.trabalho04_2018_1.model.Veiculo;
 import com.example.samsung.trabalho04_2018_1.view.MainActivity;
 
