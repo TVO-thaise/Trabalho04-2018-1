@@ -2,6 +2,7 @@ package com.example.samsung.trabalho04_2018_1.service;
 
 import com.example.samsung.trabalho04_2018_1.model.Marca;
 import com.example.samsung.trabalho04_2018_1.model.Modelo;
+import com.example.samsung.trabalho04_2018_1.model.Preco;
 import com.example.samsung.trabalho04_2018_1.model.Tipo;
 import com.example.samsung.trabalho04_2018_1.model.Valor;
 import com.example.samsung.trabalho04_2018_1.model.Veiculo;
@@ -63,30 +64,30 @@ public class FipeService {
         }.execute();
     }
 
-        public void getPreco(final Modelo modelo, final ServiceCallback<ArrayList<Valor>> callback) {
+        public void getPreco(final Modelo modelo, final ServiceCallback<ArrayList<Preco>> callback) {
 
-        new FipeAsyncTask<Valor>(activity,callback){
+        new FipeAsyncTask<Preco>(activity,callback){
             @Override
             public String createURL() {
                 return BASE_URL + modelo.getVeiculo().getMarca().getTipo().getTipo()+"/veiculo/"+
                         modelo.getVeiculo().getMarca().getId()+"/"+modelo.getVeiculo().getId()+"/"+modelo.getId()+".json";
             }
             @Override
-            public Valor createBean(JSONObject obj) throws Exception {
-                Valor valor = new Valor();
-                valor.setModelo(modelo);
+            public Preco createBean(JSONObject obj) throws Exception {
+                Preco preco = new Preco();
+                preco.setModelo(modelo);
 
-                valor.setId(obj.getString("id"));
-                valor.setNome(obj.getString("nome"));
-                valor.setValor(obj.getString("valor"));
-                valor.setCombustivel(obj.getString("combustivel"));
-                valor.setFipeCodigo(obj.getString("fipe_codigo"));
-                valor.setMarca(obj.getString("marca"));
-                valor.setReferencia(obj.getString("referencia"));
-                valor.setKey(obj.getString("key"));
-                valor.setAnoModelo(obj.getInt("ano_modelo"));
+                preco.setId(obj.getString("id"));
+                preco.setNome(obj.getString("nome"));
+                preco.setPreco(obj.getString("preco"));
+                preco.setCombustivel(obj.getString("combustivel"));
+                preco.setFipeCodigo(obj.getString("fipe_codigo"));
+                preco.setMarca(obj.getString("marca"));
+                preco.setReferencia(obj.getString("referencia"));
+                preco.setKey(obj.getString("key"));
+                preco.setAnoModelo(obj.getInt("ano_modelo"));
 
-                return valor;
+                return preco;
             }
         }.execute();
     }

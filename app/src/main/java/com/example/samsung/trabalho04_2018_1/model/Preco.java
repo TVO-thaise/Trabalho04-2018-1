@@ -1,17 +1,17 @@
 package com.example.samsung.trabalho04_2018_1.model;
 
-public class Valor extends SimpleBean {
+public class Preco extends SimpleBean{
 
     private Modelo modelo;
     private int anoModelo;
     private String marca;
-    private String valor;
+    private String preco;
     private String combustivel;
     private String referencia;
     private String fipeCodigo;
     private String key;
 
-    public Valor() {}
+    public Preco() {}
 
     public Modelo getModelo() {
         return modelo;
@@ -38,11 +38,11 @@ public class Valor extends SimpleBean {
     }
 
     public String getPreco() {
-        return valor;
+        return preco;
     }
 
     public void setPreco(String preco) {
-        this.valor = preco;
+        this.preco = preco;
     }
 
     public String getCombustivel() {

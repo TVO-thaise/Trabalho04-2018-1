@@ -1,15 +1,18 @@
 package com.example.samsung.trabalho04_2018_1.holder;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.samsung.trabalho04_2018_1.R;
-import com.example.samsung.trabalho04_2018_1.model.Valor;
+import com.example.samsung.trabalho04_2018_1.model.Preco;
 
-public class ValorViewHolder {extends SimpleBeanViewHolder<Valor>{
+public class PrecoViewHolder extends SimpleBeanViewHolder<Preco>{
 
     private static final String GOOGLE_IMG_URL = "https://www.google.com/search?site=&tbm=isch&q=";
 
-    public final TextView tvValor;
+    public final TextView tvPreco;
     public final TextView tvReferencia;
     public final TextView tvCodigoFipe;
     public final TextView tvMarca;
@@ -18,9 +21,9 @@ public class ValorViewHolder {extends SimpleBeanViewHolder<Valor>{
     private AdvancedWebView mWebView;
     private String imgUrl;
 
-    public ValorViewHolder(View view) {
+    public PrecoViewHolder(View view) {
         super(view);
-        tvValor = (TextView) view.findViewById(R.id.tvValor);
+        tvPreco = (TextView) view.findViewById(R.id.tvPreco);
         tvReferencia = (TextView) view.findViewById(R.id.tvReferencia);
         tvCodigoFipe = (TextView) view.findViewById(R.id.tvCodigoFipe);
         tvCombustivel = (TextView) view.findViewById(R.id.tvCombustivel);
@@ -29,14 +32,14 @@ public class ValorViewHolder {extends SimpleBeanViewHolder<Valor>{
         //mWebView = (AdvancedWebView) view.findViewById(R.id.webview);
     }
 
-    public ValorViewHolder(LayoutInflater inflater, ViewGroup parent) {
-        this(inflater.inflate(R.layout.item_valor, parent, false));
+    public PrecoViewHolder(LayoutInflater inflater, ViewGroup parent) {
+        this(inflater.inflate(R.layout.item_preco, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(Valor item) {
+    public void onBindViewHolder(Preco item) {
         super.onBindViewHolder(item);
-        tvValor.setText(item.getValor());
+        tvPreco.setText(item.getPreco());
         tvReferencia.setText(item.getReferencia());
         tvCodigoFipe.setText(item.getFipeCodigo());
         tvMarca.setText(item.getMarca());

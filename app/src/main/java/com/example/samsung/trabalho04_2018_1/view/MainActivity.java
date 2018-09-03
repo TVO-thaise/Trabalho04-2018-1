@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.samsung.trabalho04_2018_1.R;
+import com.example.samsung.trabalho04_2018_1.utils.Android;
 
 public class MainActivity extends AppCompatActivity implements MaterialSearchView.OnQueryTextListener{
 

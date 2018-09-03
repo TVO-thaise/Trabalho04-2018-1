@@ -5,17 +5,19 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.example.samsung.trabalho04_2018_1.adapter.SimpleBeanRecyclerViewAdapter;
+import com.example.samsung.trabalho04_2018_1.holder.PrecoViewHolder;
 import com.example.samsung.trabalho04_2018_1.holder.SimpleBeanViewHolder;
-import com.example.samsung.trabalho04_2018_1.holder.ValorViewHolder;
 import com.example.samsung.trabalho04_2018_1.model.Modelo;
-import com.example.samsung.trabalho04_2018_1.model.Valor;
+import com.example.samsung.trabalho04_2018_1.model.Preco;
+import com.example.samsung.trabalho04_2018_1.service.FipeService;
+import com.example.samsung.trabalho04_2018_1.service.ServiceCallback;
 
 import java.util.ArrayList;
 
-public class FragmentValor extends AbstractFragment<Valor, Modelo>{
+public class FragmentPreco extends AbstractFragment<Preco, Modelo>{
 
-    public static FragmentValor getInstance(Modelo modelo){
-        FragmentValor fragment = new FragmentValor();
+    public static FragmentPreco getInstance(Modelo modelo){
+        FragmentPreco fragment = new FragmentPreco();
         Bundle args = new Bundle();
         args.putSerializable(PARAMETER, modelo);
         fragment.setArguments(args);
@@ -33,10 +35,10 @@ public class FragmentValor extends AbstractFragment<Valor, Modelo>{
     }
 
     @Override
-    public void createData(final SimpleBeanRecyclerViewAdapter<Valor> adapter) {
-        new FipeService((MainActivity)getActivity()).getPreco(parameter, new ServiceCallback<ArrayList<Valor>>() {
+    public void createData(final SimpleBeanRecyclerViewAdapter<Preco> adapter) {
+        new FipeService((MainActivity)getActivity()).getPreco(parameter, new ServiceCallback<ArrayList<Preco>>() {
             @Override
-            public void onSuccess(ArrayList<Valor> data) {
+            public void onSuccess(ArrayList<Preco> data) {
                 adapter.setData(data);
             }
         });
@@ -44,7 +46,7 @@ public class FragmentValor extends AbstractFragment<Valor, Modelo>{
 
     @Override
     protected SimpleBeanViewHolder createHolder(LayoutInflater inflater, ViewGroup parent) {
-        return new ValorViewHolder(inflater, parent);
+        return new PrecoViewHolder(inflater, parent);
     }
 
     @Override
@@ -53,7 +55,7 @@ public class FragmentValor extends AbstractFragment<Valor, Modelo>{
     }
 
     @Override
-    public void onClick(Valor obj) {
+    public void onClick(Preco obj) {
         //TODO
         ((MainActivity)getActivity()).closeSearch();
     }

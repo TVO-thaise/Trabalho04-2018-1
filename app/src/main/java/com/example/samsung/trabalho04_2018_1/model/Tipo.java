@@ -2,7 +2,7 @@ package com.example.samsung.trabalho04_2018_1.model;
 
 import com.example.samsung.trabalho04_2018_1.R;
 
-public class Tipo extends SimpleBean {
+public class Tipo extends SimpleBean{
 
     public static final Tipo[] TIPOS = {
             new Tipo("Carros", "carros", R.drawable.ic_carros),
@@ -11,21 +11,19 @@ public class Tipo extends SimpleBean {
     };
 
     private String tipo;
-    private String nome;
+    private int icon;
 
-
-    private Tipo(String nome, String tipo) {
+    private Tipo(String name, String tipo, int icon) {
         this.nome = nome;
         this.tipo = tipo;
-
+        this.icon = icon;
     }
 
     public String getTipo() {
         return tipo;
     }
 
-    @Override
-    public String getNome() {
-        return nome;
+    public int getIcon() {
+        return icon;
     }
 }

@@ -13,10 +13,12 @@ public class Marca extends SimpleBean{
     }
 
     public Tipo getTipo() {
+
         return tipo;
     }
 
     public void setTipo(Tipo tipo) {
+
         this.tipo = tipo;
     }
 }
